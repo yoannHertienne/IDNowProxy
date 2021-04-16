@@ -7,13 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7766B9B557A6C1D73D83E625 /* Pods_IDNowProxy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE66F71980844540F099E97F /* Pods_IDNowProxy.framework */; };
 		CAAE18E22627400100297B2A /* IDNowProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = CAAE18E02627400100297B2A /* IDNowProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CAAE18EA2627402700297B2A /* IDNowSDKCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAAE18E92627402600297B2A /* IDNowSDKCore.framework */; };
+		CAAE18EC2627403200297B2A /* FaceTecSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAAE18EB2627403200297B2A /* FaceTecSDK.framework */; };
+		CAAE18EE2627406D00297B2A /* SwiftFrameworkProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAE18ED2627406D00297B2A /* SwiftFrameworkProxy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		755CF87CC1C59866C3EB3588 /* Pods-IDNowProxy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDNowProxy.release.xcconfig"; path = "Target Support Files/Pods-IDNowProxy/Pods-IDNowProxy.release.xcconfig"; sourceTree = "<group>"; };
+		89EE2EE66EA0F6BE21627A72 /* Pods-IDNowProxy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDNowProxy.debug.xcconfig"; path = "Target Support Files/Pods-IDNowProxy/Pods-IDNowProxy.debug.xcconfig"; sourceTree = "<group>"; };
+		AE66F71980844540F099E97F /* Pods_IDNowProxy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IDNowProxy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAAE18DD2627400100297B2A /* IDNowProxy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IDNowProxy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAAE18E02627400100297B2A /* IDNowProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDNowProxy.h; sourceTree = "<group>"; };
 		CAAE18E12627400100297B2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAAE18E92627402600297B2A /* IDNowSDKCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IDNowSDKCore.framework; sourceTree = "<group>"; };
+		CAAE18EB2627403200297B2A /* FaceTecSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FaceTecSDK.framework; sourceTree = "<group>"; };
+		CAAE18ED2627406D00297B2A /* SwiftFrameworkProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftFrameworkProxy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,17 +31,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAAE18EA2627402700297B2A /* IDNowSDKCore.framework in Frameworks */,
+				CAAE18EC2627403200297B2A /* FaceTecSDK.framework in Frameworks */,
+				7766B9B557A6C1D73D83E625 /* Pods_IDNowProxy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4FF20D985B31B988DB95AC57 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AE66F71980844540F099E97F /* Pods_IDNowProxy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CAAE18D32627400100297B2A = {
 			isa = PBXGroup;
 			children = (
+				CAAE18E92627402600297B2A /* IDNowSDKCore.framework */,
+				CAAE18EB2627403200297B2A /* FaceTecSDK.framework */,
 				CAAE18DF2627400100297B2A /* IDNowProxy */,
 				CAAE18DE2627400100297B2A /* Products */,
+				DC0985DBB4875EFDBC0B841C /* Pods */,
+				4FF20D985B31B988DB95AC57 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -48,8 +73,18 @@
 			children = (
 				CAAE18E02627400100297B2A /* IDNowProxy.h */,
 				CAAE18E12627400100297B2A /* Info.plist */,
+				CAAE18ED2627406D00297B2A /* SwiftFrameworkProxy.swift */,
 			);
 			path = IDNowProxy;
+			sourceTree = "<group>";
+		};
+		DC0985DBB4875EFDBC0B841C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				89EE2EE66EA0F6BE21627A72 /* Pods-IDNowProxy.debug.xcconfig */,
+				755CF87CC1C59866C3EB3588 /* Pods-IDNowProxy.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -70,6 +105,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CAAE18E52627400100297B2A /* Build configuration list for PBXNativeTarget "IDNowProxy" */;
 			buildPhases = (
+				791B7620AA1DB264A5497562 /* [CP] Check Pods Manifest.lock */,
 				CAAE18D82627400100297B2A /* Headers */,
 				CAAE18D92627400100297B2A /* Sources */,
 				CAAE18DA2627400100297B2A /* Frameworks */,
@@ -94,6 +130,7 @@
 				TargetAttributes = {
 					CAAE18DC2627400100297B2A = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -125,11 +162,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		791B7620AA1DB264A5497562 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IDNowProxy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CAAE18D92627400100297B2A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAAE18EE2627406D00297B2A /* SwiftFrameworkProxy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +235,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -236,6 +300,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -260,14 +325,22 @@
 		};
 		CAAE18E62627400100297B2A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89EE2EE66EA0F6BE21627A72 /* Pods-IDNowProxy.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = IDNowProxy/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -276,6 +349,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = test.IDNowProxy;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -283,14 +357,22 @@
 		};
 		CAAE18E72627400100297B2A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 755CF87CC1C59866C3EB3588 /* Pods-IDNowProxy.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = IDNowProxy/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
