@@ -309,6 +309,54 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)cancelEvent:(NSString *)key;
 
 
+
+#pragma mark - Push Notification
+#if (TARGET_OS_IOS || TARGET_OS_OSX)
+#ifndef Insights_EXCLUDE_PUSHNOTIFICATIONS
+/**
+ * Shows default system dialog that asks for user's permission to display notifications.
+ * @discussion A unified convenience method that handles asking for notification permission on both iOS10 and older iOS versions with badge, sound and alert notification types.
+ */
+- (void)askForNotificationPermission;
+
+/**
+ * Shows default system dialog that asks for user's permission to display notifications with given options and completion handler.
+ * @discussion A more customizable version of unified convenience method that handles asking for notification permission on both iOS10 and older iOS versions.
+ * @discussion Notification types the app wants to display can be specified using @c options parameter.
+ * @discussion Completion block has @c granted (@c BOOL) parameter which is @c YES if user granted permission, and @c error (@c NSError) parameter which is non-nil if there is an error.
+ * @param options Bitwise combination of notification types (badge, sound or alert) the app wants to display
+ * @param completionHandler A completion handler block to be executed when user answers notification permission dialog
+ */
+- (void)askForNotificationPermissionWithOptions:(UNAuthorizationOptions)options completionHandler:(void (^)(BOOL granted, NSError * __nullable error))completionHandler API_AVAILABLE(ios(10.0), macos(10.14));
+
+/**
+ * Records action event for a manually presented push notification with custom action buttons.
+ * @discussion If a push notification with custom action buttons is handled and presented manually using custom UI, user's action needs to be recorded manually.
+ * @discussion With this convenience method user's action can be recorded passing push notification dictionary and clicked button index.
+ * @discussion Button index should be @c 0 for default action, @c 1 for the first action button and @c 2 for the second action button.
+ * @param userInfo Manually presented push notification dictionary
+ * @param buttonIndex Index of custom action button user clicked
+ */
+- (void)recordActionForNotification:(NSDictionary *)userInfo clickedButtonIndex:(NSInteger)buttonIndex;
+
+/**
+ * Records push notification token to Insights Server for current device ID.
+ * @discussion Can be used to re-send push notification token for current device ID, without waiting for the app to be restarted.
+ * @discussion For cases like a new user logs in and device ID changes, or a new app key is set.
+ * @discussion In general, push notification token is handled automatically and this method does not need to be called manually.
+ */
+- (void)recordPushNotificationToken;
+
+/**
+ * Clears push notification token on Insights Server for current device ID.
+ * @discussion Can be used to clear push notification token for current device ID, before the current user logs out and device ID changes, without waiting for the app to be restarted.
+ */
+- (void)clearPushNotificationToken;
+#endif
+#endif
+
+
+
 #pragma mark - Location
 
 /**

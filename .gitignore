@@ -2,3 +2,4 @@ build
 Pods
 .idea
 Podfile.lock
+IDNowSDKCore.framework/IDNowSDKCore
