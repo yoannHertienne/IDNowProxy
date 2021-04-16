@@ -1,2 +1,2 @@
-IDNowSDKCore.framework/IDNowSDKCore, filter=lfs diff=lfs merge=lfs -text
-FaceTecSDK.framework/FaceTecSDK, filter=lfs diff=lfs merge=lfs -text
+IDNowSDKCore filter=lfs diff=lfs merge=lfs -text
+FaceTecSDK filter=lfs diff=lfs merge=lfs -text
